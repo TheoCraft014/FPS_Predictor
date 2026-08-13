@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/756124c0-6220-499f-a457-0c0496e66b8e" /># FPS_Predictor
+# FPS_Predictor
 Evaluate machine learning regression models to predict Frame Rate (FPS) in Unity-rendered 3D scenes based on various rendering load settings.
 
 ## Motivation
@@ -30,8 +30,9 @@ The pipeline evaluates baseline models alongside hyperparameter-tuned advanced r
 4. Polynomial Ridge RegressionPipeline: One-hot encoded quality presets $\to$ Degree-3 polynomial expansion $\to$ L2-regularized Ridge regression. 
 
 ## Results
+All models were evaluated on the untouched hidden test set (FPS_hidden.csv):
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/71cc0889-74bd-4fb1-8fc4-0f6181aa68f5" />
+ModelHidden R2Hidden RMSE (FPS)Hidden MAE (FPS)Median AE (FPS)Hidden MAPEBase Lifted Linear Regression  0.4286  25.04  18.20  13.26  247.78%  Polynomial Ridge Regression  0.2340  29.00  17.47  —273.28%  Support Vector Regression (SVR)  0.8093  14.47  9.35  5.52  95.59%  Decision Tree Regressor  0.8236  13.92  8.26  3.94  49.83%  Random Forest Regressor (Best)  0.8400  13.25  7.73  3.64  48.29%
 
 ## Key Observations
 
